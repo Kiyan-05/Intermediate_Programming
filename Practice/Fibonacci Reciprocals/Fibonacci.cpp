@@ -23,16 +23,16 @@ bool isFib(int x)
     {
         res = 1;
     }
-    int sum = n1+n2;
-    while(sum<=x)
+    int temp = n1+n2;
+    while(temp<=x)
     {
-        if(sum==x)
+        if(temp==x)
         {
             res = 1;
         }
         n1=n2;
-        n2=sum;
-        sum=n1+n2;
+        n2=temp;
+        temp=n1+n2;
     }
     return res;
 }

@@ -15,26 +15,24 @@ int main()
 
 bool isFib(int x)
 {
-    bool res=0;
+    if(x==1)
+    {
+        return 1;
+    }
     int n1 = 0;
     int n2 = 1;
-
-    if(n2==x)
+    int fn = n1+n2;
+    while(fn<=x)
     {
-        res = 1;
-    }
-    int temp = n1+n2;
-    while(temp<=x)
-    {
-        if(temp==x)
+        if(fn==x)
         {
-            res = 1;
+            return 1;
         }
-        n1=n2;
-        n2=temp;
-        temp=n1+n2;
+        n1 = n2;
+        n2 = fn;
+        fn = n1+n2;
     }
-    return res;
+    return 0;
 }
 
 void dispFibsInRange(int s, int e)

@@ -2,7 +2,7 @@
 using namespace std;
 
 bool isFib(int x);
-void dispFibsInRange(int s=0, int e=10);
+void dispFibsInRange(int s=0, int e=150);
 void dispFibsReciprocalInRange(int s=0, int e=10);
 double FibsReciprocalSumInRange(int s, int e);
 

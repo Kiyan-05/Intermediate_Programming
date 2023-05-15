@@ -17,3 +17,6 @@ int sum(int x, int y)
 }
 
 int difference(int x, int y)
+{
+
+}

@@ -5,6 +5,7 @@ int squareOfInt(int);
 int cubeOfInt(int&);
 int productXY(const int&, const int&);
 double defParamExp(int a, double b, int c=1, double d=3.5);
+int sample(int&);
 
 int main()
 {
@@ -21,11 +22,19 @@ int main()
     //int x=10;
     //int c=5;
     //cout<<productXY(x,c);
-    int x=3;
-    double z=1.5;
-    cout<<defParamExp(1,2.5)<<endl;
-    cout<<defParamExp(x,z,7)<<endl;
-    cout<<defParamExp(x,1.1,7,z)<<endl;
+    //int x=3;
+    //double z=1.5;
+    //cout<<defParamExp(1,2.5)<<endl;
+    //cout<<defParamExp(x,z,7)<<endl;
+    //cout<<defParamExp(x,1.1,7,z)<<endl;
+    int l;
+    cout<<sample(l);
+}
+
+int sample(int &x)
+{
+    int z = x + 1;
+    return z;
 }
 
 double defParamExp(int a, double b, int c, double d)

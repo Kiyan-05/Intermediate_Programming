@@ -1,0 +1,106 @@
+1. Code Analysis: Write the proper statement, constant(s), operator, or variable(s) in order to satisfy the needed output.
+
+	bool is_prime(int n) {
+    	/*
+    	Returns true if n is a prime number, false otherwise.
+    	*/
+    	for (int i = ___; i * i <= n; i++) {
+        	if (_____ == 0) {
+            	return ___;
+        	}
+    	}
+    		return ___;
+	}
+
+
+2. Code Analysis: Write the proper statement, constant(s), operator, or variable(s) in order to satisfy the needed output.
+
+bool has_unique_digits(int n) {
+    /*
+    Returns true if the decimal representation of n contains each digit exactly once, false otherwise.
+    */
+    std::vector<bool> digits(10, false);
+    while (n > 0) {
+        int digit = ______;
+        if (________) {
+            return ___;
+        }
+        digits[digit] = true;
+        n /= 10;
+    }
+    return _____;
+}
+
+3. Code Analysis: Write the proper statement, constant(s), operator or variable(s) in order to satisfy the needed output.
+
+/** Assume functions is_Prime(n) and has_unique_digits(n) already exist. **/
+
+int count_prime_number_with_unique_digits(int a, int b) {
+    /*
+    Returns the number of integers n such that a <= n <= b and the decimal representation of n
+    contains each digit exactly once, and such that n is a prime number.
+    */
+    int count = 0;
+    for (int n = a; _______; n++) {
+        if (_____ && ______) {
+            ________;
+        }
+    }
+    return count;
+}
+
+4. Code Analysis: Write the proper statement, constant(s), operator or variable(s) in order to satisfy the needed output.
+
+/** Assume functions is_Prime(n) and has_unique_digits(n) already exist. **/
+
+int smallest_prime_with_unique_digits(int n) {
+    /*
+    Returns the smallest prime number p greater than or equal to n that contains each digit exactly once.
+    */
+    for (int p = n; ; p++) {
+        if (_____ && _____)
+            __________;
+        }
+    }
+    return 0;
+}
+
+5. Program Tracing: Trace the output of C code then explain briefly and concisely how it operates.
+
+for(int i=100; i < 120; i++)
+{
+	vector<int> d;
+	int x = i;
+	bool f = true;
+	while(x > 0)
+	{
+		d.push_back(x%10);
+		x/=10;
+	}
+	int y = d.size();
+	for(int j=0; j < y/2; j++)
+	{
+		if(d[j] != d[y-j-1])
+		{
+			f = false;
+			break;
+		}
+	}
+	if(f)
+		cout << i << " ";
+}
+
+
+6. Program Tracing: Trace the output of C code then explain briefly and concisely how it operates.
+
+for(int i=100; i < 111; i++)
+{
+	int a=i, b=0;
+	while(a > 0)
+	{
+		b *= 10;
+		b += (a%10);
+		a/=10;
+	}
+	cout << b << " ";
+}

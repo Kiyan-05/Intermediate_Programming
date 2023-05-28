@@ -9,7 +9,7 @@ struct student
     double score;
 };
 
-void readFromRecord(student studScoreRec[]);
+void readFromRecord(student studScoreRec[],int s);
 double recAverage(student studScoreRec[], int s);
 double recSTDev(student studScoreRec[], int s);
 void writeResultToFile(double ave, double stDev);
@@ -21,32 +21,29 @@ int main()
     int s = 7;
     student studScoreRec[s];
 
-    readFromRecord(studScoreRec);
+    readFromRecord(studScoreRec,s);
     ave = recAverage(studScoreRec,s);
     stDev = recSTDev(studScoreRec,s);
 
     writeResultToFile(ave,stDev);
 }
 
-void readFromRecord(student studScoreRec[])
+void readFromRecord(student studScoreRec[], int s)
 {
     ifstream inStudentScore;
 
     inStudentScore.open("StudentScore.txt");
 
-//    if(!inStudentScore.eof())
-//    {
-//        for(int i=0; i<7; i++)
-//        {
-//            getline(inStudentScore,studScoreRec[i].studentName, ' ');
-//            inStudentScore>>studScoreRec[i].score;
-//        }
-//    }
-
     for(int i=0; !inStudentScore.eof(); i++)
     {
-        getline(inStudentScore,studScoreRec[i].studentName, ' ');
-        inStudentScore>>studScoreRec[i].score;
+        //getline(inStudentScore,studScoreRec[i].studentName, ' ');
+        inStudentScore>> studScoreRec[i].studentName >>studScoreRec[i].score;
+    }
+
+
+    for(int i=0; i<s; i++)
+    {
+        cout<<studScoreRec[i].studentName<<": "<<studScoreRec[i].score<<"\n";
     }
 }
 
@@ -58,7 +55,6 @@ double recAverage(student studScoreRec[], int s)
     {
         res += studScoreRec[i].score;
     }
-
     return res/s;
 }
 

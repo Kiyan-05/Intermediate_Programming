@@ -1,0 +1,16 @@
+#ifndef SAMPLECLASS_
+#define SAMPLECLASS_
+
+
+class sampleClass
+{
+    public:
+        sampleClass();
+        virtual ~sampleClass();
+
+    protected:
+
+    private:
+};
+
+#endif // SAMPLECLASS_

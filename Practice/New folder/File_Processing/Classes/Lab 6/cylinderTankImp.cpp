@@ -9,77 +9,71 @@ cylinderTank::cylinderTank()
 
 }
 
-cylinderTank::~cylinderTank()
+void cylinderTank::setHeight(double height)
 {
-
+    this->height = height;
 }
 
-void cylinderTank::setHeight(double varHeight)
+void cylinderTank::setRadius(double radius)
 {
-    height = varHeight;
+    this->radius = radius;
 }
 
-void cylinderTank::setRadius(double varRadius)
+void cylinderTank::setDrainRate(double aveDrainRate)
 {
-    radius = varRadius;
+    this->aveDrainRate = aveDrainRate;
 }
 
-void cylinderTank::setDrainRate(double varAveDrainRate)
+void cylinderTank::setFillRate(double aveFillRate)
 {
-    aveDrainRate = varAveDrainRate;
-}
-
-void cylinderTank::setFillRate(double varAveFillRate)
-{
-    aveFillRate = varAveFillRate;
+    this->aveFillRate = aveFillRate;
 }
 
 double cylinderTank::getHeight()
 {
-    return height;
+    return this->height;
 }
 
 double cylinderTank::getRadius()
 {
-    return radius;
+    return this->radius;
 }
 
 double cylinderTank::getDrainRate()
 {
-    return aveDrainRate;
+    return this->aveDrainRate;
 }
 
 double cylinderTank::getFillRate()
 {
-    return aveFillRate;
+    return this->aveFillRate;
 }
 
 double cylinderTank::volume()
 {
-    double volume = (M_PI * (pow(radius,2))) * height;
+    double volume = (M_PI * (pow(this->radius,2))) * this->height;
     return volume;
 }
 
 void cylinderTank::timeToFillEmpty()
 {
-    double time = cylinderTank::volume() / aveFillRate;
-    cout<<"Time to fill the tank completely: "<<time << " seconds.\n";
+    double time = cylinderTank::volume() / (this->aveFillRate - this->aveDrainRate);
+    int mins = time / 60;
+    int hours = mins / 60;
+    int sec = time;
+    cout<<"Time to fill the tank completely: "<<hours<<":"<<mins%60<<":"<<sec%60<<"\n";
 }
 
 void cylinderTank::timeToFillPartial(double varTime)
 {
-    double time = (cylinderTank::volume()*varTime) / aveFillRate;
-    cout<<"Time to fill the tank to "<<varTime<<"% is approximately "<<time << " seconds.\n";
+    double time = (cylinderTank::volume()*(varTime/100)) / (this->aveFillRate-this->aveDrainRate);
+    int mins = time / 60;
+    int hours = mins / 60;
+    int sec = time;
+    cout<<"Time to fill the tank completely: "<<hours<<":"<<mins%60<<":"<<sec%60<<"\n";
 }
 
-void cylinderTank::timeToDrainEmpty()
+cylinderTank::~cylinderTank()
 {
-    double time = cylinderTank::volume()/ aveDrainRate;
-    cout<<"Time to drain the tank completely: "<<time << " seconds.\n";
-}
 
-void cylinderTank::timeToDrainPartial(double varTime)
-{
-    double time = (cylinderTank::volume() * varTime) / aveDrainRate;
-    cout<<"Time to drain the tank to "<<varTime<<"% is approximately "<<time << " seconds.\n";
 }

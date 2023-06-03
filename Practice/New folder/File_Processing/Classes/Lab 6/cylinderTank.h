@@ -23,8 +23,7 @@ public:
 
     void timeToFillEmpty();
     void timeToFillPartial(double);
-    void timeToDrainEmpty();
-    void timeToDrainPartial(double);
+
     ~cylinderTank();
 };
 

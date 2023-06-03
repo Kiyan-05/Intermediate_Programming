@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1479366377 source:c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\dataabstraction\pointadt\main.cpp
+	<iostream>
+	"point.h"
+
+1479366153 source:c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\dataabstraction\pointadt\pointimp.cpp
+	<iostream>
+	"point.h"
+
+1479366084 c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\dataabstraction\pointadt\point.h
+
+1479896340 source:c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\pointimp.cpp
+	"point.h"
+	<iostream>
+
+1653445352 c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\point.h
+
+1653447404 source:c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\main.cpp
+	<iostream>
+	"point.h"
+	"point3D.h"
+	"line.h"
+
+1479777635 c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\point3d.h
+	"point.h"
+
+1479896648 c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\line.h
+	"point.h"
+
+1479895770 c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\lineimp.cpp
+	"line.h"
+	<iostream>
+	<cmath>
+
+1479896673 source:c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\lineimp.cpp
+	"line.h"
+	<iostream>
+	<cmath>
+
+1479896358 source:c:\users\majbregis\documents\vsu academe\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\point3dimp.cpp
+	"point3D.h"
+	<iostream>
+
+1479896673 source:c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\lineimp.cpp
+	"line.h"
+	<iostream>
+	<cmath>
+
+1479896648 c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\line.h
+	"point.h"
+
+1653445352 c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\point.h
+
+1653454375 source:c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\main.cpp
+	<iostream>
+	"point.h"
+	"point3D.h"
+	"line.h"
+
+1479777635 c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\point3d.h
+	"point.h"
+
+1479896358 source:c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\point3dimp.cpp
+	"point3D.h"
+	<iostream>
+
+1479896340 source:c:\users\majbregis\documents\vsu academe\oldcurriculum\cs-103\instruction materials\lecmanual\sourcecodes\chapter 6\pointadt\pointimp.cpp
+	"point.h"
+	<iostream>
+

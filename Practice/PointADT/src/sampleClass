@@ -1,0 +1,11 @@
+#include "sampleClass."
+
+sampleClass::sampleClass()
+{
+    //ctor
+}
+
+sampleClass::~sampleClass()
+{
+    //dtor
+}

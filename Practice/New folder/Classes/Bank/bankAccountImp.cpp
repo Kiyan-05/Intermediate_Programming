@@ -44,7 +44,7 @@ void bankAccount::deposit(double amount)
     }
 }
 
-double withdraw(double amount)
+double bankAccount::withdraw(double amount)
 {
     if(amount > 0 && amount < balance)
     {
@@ -57,6 +57,7 @@ double withdraw(double amount)
     {
         cout<<"Invalid amount";
     }
+    return 0;
 }
 
 void bankAccount::printAccountInfo()
@@ -66,6 +67,6 @@ void bankAccount::printAccountInfo()
     cout<<"\nBalance: "<<balance;
 }
 
-bankAccount~bankAccount()
+bankAccount::~bankAccount()
 {
 }

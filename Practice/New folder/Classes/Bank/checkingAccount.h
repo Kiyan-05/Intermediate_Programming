@@ -21,7 +21,7 @@ class checkingAccount: public bankAccount
         void setServiceCharge(double);
         double getServiceCharge();
 
-        void postInterest();
+        double postInterest();
         bool checkBalance();
         void printCheck();
         double withdraw(double);

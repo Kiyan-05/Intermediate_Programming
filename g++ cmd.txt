@@ -1,0 +1,1 @@
+g++ -std=c++14 -O3 -Wall <filenames separated by space> -o <executable file name>

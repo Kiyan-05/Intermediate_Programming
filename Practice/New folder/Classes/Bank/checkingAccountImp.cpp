@@ -62,7 +62,7 @@ void checkingAccount::printCheck()
 {
     cout<<"\nAccount: "<<accountNumber;
     cout<<"\nBalance: "<<balance<<" --- Minimum balance: "<<minBalance;
-    cout<<"\Interest Rate: "<<interest<<" --- Post interest: "<<checkingAccount::postInterest();
+    cout<<"\nInterest Rate: "<<interest<<" --- Post interest: "<<checkingAccount::postInterest();
 }
 
 double checkingAccount::withdraw(double amount)

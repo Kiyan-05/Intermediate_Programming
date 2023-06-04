@@ -2,7 +2,7 @@
 #define SAVINGSACCOUNT_H_INCLUDED
 #include "bankAccount.h"
 
-class savingsAccount
+class savingsAccount: public bankAccount
 {
 private:
     double interest;
@@ -16,6 +16,7 @@ public:
 
     double withdraw(double);
     void printAccountInfo();
+    ~savingsAccount();
 };
 
 #endif // SAVINGSACCOUNT_H_INCLUDED

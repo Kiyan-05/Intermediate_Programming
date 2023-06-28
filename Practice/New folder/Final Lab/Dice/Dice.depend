@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1687751418 source:c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\main.cpp
+	<iostream>
+	"dice.h"
+	"RiggedDice.h"
+	"twoDice.h"
+
+1687751369 source:c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\dice.cpp
+	"dice.h"
+	<iostream>
+	<cstdlib>
+	<time.h>
+
+1687751270 c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\dice.h
+
+1687750367 c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\riggeddice.h
+	"dice.h"
+
+1687750394 c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\twodice.h
+	"dice.h"
+	"RiggedDice.h"
+
+1687751377 source:c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\riggeddice.cpp
+	"RiggedDice.h"
+	<iostream>
+	<cstdlib>
+	<time.h>
+
+1687751679 source:c:\users\josh\documents\github\intermediate_programming\practice\new folder\final lab\dice\twodice.cpp
+	"twoDice.h"
+

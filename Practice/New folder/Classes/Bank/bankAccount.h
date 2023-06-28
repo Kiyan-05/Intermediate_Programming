@@ -8,13 +8,13 @@ class bankAccount
         double balance;
 
     public:
-        bankAccount(int);
-        bankAccount(int, double);
-        void setAccountNumber(int);
-        int getAccountNumber();
-        double getBalance();
-        void deposit(double);
-        double withdraw(double);
+        bankAccount(int);               //acount#, default balance
+        bankAccount(int, double);       //acount#,initial balance
+        void setAccountNumber(int);     //change account number
+        int getAccountNumber();         //retrieve
+        double getBalance();            //retrieve
+        void deposit(double);           //amount to deposit
+        double withdraw(double);        //amount to withdraw and returns it
         void printAccountInfo();
         ~bankAccount();
 };

@@ -9,10 +9,10 @@ bankAccount::bankAccount(int account)
     balance  = 0;
 }
 
-bankAccount::bankAccount(int account, double balance)
+bankAccount::bankAccount(int account, double varBalance)
 {
     accountNumber = account;
-    balance = balance;
+    balance = varBalance;
 }
 
 void bankAccount::setAccountNumber(int account)
@@ -40,7 +40,7 @@ void bankAccount::deposit(double amount)
     }
     else
     {
-        cout<<"Invalid amount";
+        cout<<"\nInvalid amount";
     }
 }
 
@@ -49,20 +49,14 @@ double bankAccount::withdraw(double amount)
     if(amount > 0 && amount < balance)
     {
         balance -= amount;
-        cout<<"\nYou successfully withdraw: "<<amount;
-        cout<<"\nYour updated balance: "<<balance;
-        return balance;
-    }
-    else
-    {
-        cout<<"Invalid amount";
+        return amount;
     }
     return 0;
 }
 
 void bankAccount::printAccountInfo()
 {
-    cout<<"\n\tAccount Info"<<"\n----------------";
+    cout<<"\nAccount Info"<<"\n--------------------------";
     cout<<"\nAccount Number: "<<accountNumber;
     cout<<"\nBalance: "<<balance;
 }

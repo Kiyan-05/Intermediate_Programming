@@ -22,23 +22,30 @@ double savingsAccount::getInterestRate()
     return interest;
 }
 
-double savingsAccount::postInterest()
+double savingsAccount::postInterest(int year)
 {
-    return balance * (interest/100);
+    double amount = 0;
+    for(int i=0; i<=year; i++)
+    {
+        amount += balance * (interest/100);
+    }
+    balance += amount;
+    return balance;
 }
 
 double savingsAccount::withdraw(double amount)
 {
-    if(amount < balance)
-    {
-        balance -= amount;
-    }
-    return amount;
+    double money = bankAccount::withdraw(amount);
+    return money;
 }
 
 void savingsAccount::printAccountInfo()
 {
-    cout<<"Savings Account"<<"\n-------------------";
+    cout<<"\nSavings Account"<<"\n-------------------";
     bankAccount::printAccountInfo();
-    cout<<"\n Interest Rate: "<<interest<<" --- Post interest: "<<savingsAccount::postInterest();
+    cout<<"\nInterest Rate: "<<interest<<"%";
+}
+
+savingsAccount::~savingsAccount()
+{
 }

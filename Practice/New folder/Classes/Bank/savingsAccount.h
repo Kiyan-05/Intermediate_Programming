@@ -4,19 +4,19 @@
 
 class savingsAccount: public bankAccount
 {
-private:
-    double interest;
+    private:
+        double interest;
 
-public:
-    savingsAccount(int,double);
-    savingsAccount(int,double,double);
-    void setInterestRate(double);
-    double getInterestRate();
-    double postInterest();
+    public:
+        savingsAccount(int,double);
+        savingsAccount(int,double,double);
+        void setInterestRate(double);
+        double getInterestRate();
+        double postInterest(int);           //yearly
 
-    double withdraw(double);
-    void printAccountInfo();
-    ~savingsAccount();
+        double withdraw(double);
+        void printAccountInfo();
+        ~savingsAccount();
 };
 
 #endif // SAVINGSACCOUNT_H_INCLUDED

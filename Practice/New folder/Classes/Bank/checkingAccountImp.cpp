@@ -14,6 +14,8 @@ checkingAccount::checkingAccount(int account, double balance, double varInterest
 {
     interest = varInterest;
     minBalance = varMinBalance;
+    serviceCharge = 0;
+    initBalance = balance;
 }
 
 void checkingAccount::setInterestRate(double varInterest)
@@ -36,9 +38,17 @@ double checkingAccount::getMinimumBalance()
     return minBalance;
 }
 
-void checkingAccount::setServiceCharge(double varServiceCharge)
+void checkingAccount::setServiceCharge(double varServiceChargePercentage)
 {
-    serviceCharge = varServiceCharge;
+    serviceCharge = balance * (varServiceChargePercentage/100);
+}
+
+void checkingAccount::chargeServiceFee(int months)
+{
+    for(int i=0; i<= months; i++)
+    {
+        balance -= serviceCharge;
+    }
 }
 
 double checkingAccount::getServiceCharge()
@@ -46,23 +56,33 @@ double checkingAccount::getServiceCharge()
     return serviceCharge;
 }
 
-double checkingAccount::postInterest()
+double checkingAccount::getInitBalance()
 {
-    return balance * (interest/100);
+    return initBalance;
+}
+
+void checkingAccount::postInterest(int year)
+{
+    double amount = 0;
+    for(int i=0; i<=year; i++)
+    {
+        amount = initBalance * (interest/100);
+        balance -= amount;
+    }
 }
 
 bool checkingAccount::checkBalance()
 {
-    if(balance>minBalance)
+    if(balance<minBalance)
         return 1;
     return 0;
 }
 
-void checkingAccount::printCheck()
+void checkingAccount::printCheck(double amount)
 {
+    cout<<"\n\nCheck"<<"\n---------------------";
     cout<<"\nAccount: "<<accountNumber;
-    cout<<"\nBalance: "<<balance<<" --- Minimum balance: "<<minBalance;
-    cout<<"\nInterest Rate: "<<interest<<" --- Post interest: "<<checkingAccount::postInterest();
+    cout<<"\nBalance: "<<checkingAccount::withdraw(amount);
 }
 
 double checkingAccount::withdraw(double amount)
@@ -71,10 +91,9 @@ double checkingAccount::withdraw(double amount)
     if(amount < balance)
     {
         money = bankAccount::withdraw(amount);
-        if(balance < minBalance) //if the balance is lower than the minimum balance setted
+        if(checkingAccount::checkBalance())    //if the balance is lower than the minimum balance setted
         {
-            serviceCharge = 200.00;
-            balance -= serviceCharge;
+            checkingAccount::chargeServiceFee(0);
             cout<<"\nYou are charged "<<serviceCharge<<" to your balance.";
             cout<<"\nIf you don't maintain the minimum balance required: "<<minBalance<<" then you'll be charged monthly.";
         }
@@ -84,11 +103,13 @@ double checkingAccount::withdraw(double amount)
 
 void checkingAccount::printAccountInfo()
 {
-    cout<<"Checkings Account"<<"\n------------------------";
+    cout<<"\nCheckings Account"<<"\n------------------------";
     bankAccount::printAccountInfo();
-    cout<<"\n-----------------------";
-    cout<<"\nInterest Rate: "<<interest;
+    cout<<"\n--------------------------";
+    cout<<"\nInterest Rate: "<<interest<<"%";
     cout<<"\nMinimum Balance: "<<minBalance;
+    if(!(checkingAccount::checkBalance()))
+        serviceCharge = 0;
     cout<<"\nService Charge: "<<serviceCharge;
 }
 
